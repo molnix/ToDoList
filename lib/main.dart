@@ -42,6 +42,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
+void deleteNotification(int id) async {
+  await flutterLocalNotificationsPlugin.cancel(id);
+}
+
 void scheduleAlarm(DateTime scheduleNotificationDateTime, int id, String body) async{
 
   var androidPlatformChannelSpecifics =

@@ -38,6 +38,7 @@ class _NotesListState extends State<NotesList> {
                 key: UniqueKey(),
                 onDismissed: (direction){
                   notesBox.deleteAt(index);
+                  deleteNotification(index);
                 },
                 background: Container(
                   color: Colors.red,
